@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 必须用 declare-styleable 包裹自定义属性 -->
+    <declare-styleable name="AppThemeAttrs">
+        <attr name="app_background" format="color" />
+        <attr name="note_card_bg" format="color" />
+        <attr name="note_text_color" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 保存 -->
+    <item
+        android:id="@+id/menu_save"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="@string/menu_save"
+        app:showAsAction="always" />
+
+    <!-- 删除 -->
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/menu_delete"
+        app:showAsAction="ifRoom" />
+
+    <!-- 撤销 -->
+    <item
+        android:id="@+id/menu_revert"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/menu_revert"/>
+
+    <!-- 颜色选择 -->
+    <item
+        android:id="@+id/menu_color"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/menu_color"
+        app:showAsAction="always" />
+
+    <!-- 完善排序菜单（使用新的结构） -->
+    <item
+        android:id="@+id/menu_sort"
+        android:title="@string/menu_sort"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        app:showAsAction="always" >
+        <menu>
+            <!-- 创建时间排序 -->
+            <item
+                android:id="@+id/sort_create_time_asc"
+                android:title="@string/sort_create_time_asc"/>
+            <item
+                android:id="@+id/sort_create_time_desc"
+                android:title="@string/sort_create_time_desc"/>
+
+            <!-- 修改时间排序 -->
+            <item
+                android:id="@+id/sort_modify_time_asc"
+                android:title="@string/sort_modify_time_asc"/>
+            <item
+                android:id="@+id/sort_modify_time_desc"
+                android:title="@string/sort_modify_time_desc"/>
+
+            <!-- 颜色排序 -->
+            <item
+                android:id="@+id/sort_color_asc"
+                android:title="@string/sort_color_asc"/>
+            <item
+                android:id="@+id/sort_color_desc"
+                android:title="@string/sort_color_desc"/>
+        </menu>
+    </item>
+</menu>

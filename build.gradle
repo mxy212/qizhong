@@ -1,0 +1,16 @@
+buildscript {
+    repositories {
+        google() // 优先配置Google仓库（用于Android相关依赖）
+        mavenCentral() // 替换jcenter()，使用Maven Central仓库
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.13.0'// 保持与Gradle 4.5匹配的AGP版本
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral() // 替换jcenter()
+    }
+}

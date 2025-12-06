@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="应用设置"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- 主题设置 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="主题设置"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:minHeight="48dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="深色模式"
+            android:textSize="16sp"
+            android:gravity="center_vertical" />
+
+        <!-- 修复触摸目标尺寸，使用 minWidth 和 minHeight -->
+        <Switch
+            android:id="@+id/switch_dark_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- 排序设置 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="默认排序方式"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_sort_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical">
+
+        <!-- 增加 RadioButton 的高度和触摸区域 -->
+        <RadioButton
+            android:id="@+id/rb_modified_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改时间（新→旧）"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp" />
+
+        <RadioButton
+            android:id="@+id/rb_modified_asc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改时间（旧→新）"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp" />
+
+        <RadioButton
+            android:id="@+id/rb_create_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="创建时间（新→旧）"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp" />
+
+        <RadioButton
+            android:id="@+id/rb_create_asc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="创建时间（旧→新）"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp" />
+
+        <RadioButton
+            android:id="@+id/rb_title_asc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题升序"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp" />
+
+        <RadioButton
+            android:id="@+id/rb_title_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题降序"
+            android:minHeight="48dp"
+            android:paddingVertical="12dp" />
+
+    </RadioGroup>
+
+    <!-- 按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="保存"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="重置"
+            android:minHeight="48dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

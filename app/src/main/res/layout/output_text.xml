@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:paddingBottom="3dip">
+    <EditText android:id="@+id/output_name"
+        android:maxLines="1"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:ems="25"
+        android:autoText="true"
+        android:capitalize="sentences"
+        android:scrollHorizontally="true"
+        android:hint="请输入标题"
+        android:contentDescription="标题编辑框"
+        android:importantForAccessibility="yes" />
+
+    <Button android:id="@+id/output_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        android:text="@string/output_ok"
+        android:onClick="OutputOk" />
+</LinearLayout>

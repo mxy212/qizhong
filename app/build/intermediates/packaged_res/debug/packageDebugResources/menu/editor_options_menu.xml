@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- ↑↑↑ 注意上面这一行 xmlns:app 必须添加 -->
+
+    <!-- 1. 保存 -->
+    <item android:id="@+id/menu_save"
+        android:icon="@drawable/ic_menu_save"
+        android:title="保存"
+        android:alphabeticShortcut='s'
+        app:showAsAction="always|withText" />
+    <!-- ↑↑↑ 注意这里改成了 app:showAsAction -->
+
+    <!-- 2. 恢复 -->
+    <item android:id="@+id/menu_revert"
+        android:icon="@drawable/ic_menu_revert"
+        android:title="恢复"
+        app:showAsAction="always" />
+
+    <!-- 3. 导出 -->
+    <item android:id="@+id/menu_export"
+        android:icon="@drawable/ic_menu_share"
+        android:title="导出"
+        app:showAsAction="ifRoom" />
+
+    <!-- 4. 背景颜色 -->
+    <item android:id="@+id/menu_color"
+        android:title="更改背景颜色"
+        app:showAsAction="never" />
+
+    <!-- 删除 -->
+    <item android:id="@+id/menu_delete"
+        android:icon="@drawable/ic_menu_delete"
+        android:title="删除"
+        app:showAsAction="never" />
+
+</menu>

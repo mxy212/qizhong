@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.android.notepad">
+
+    <!-- 权限配置：按Android版本分级授权 -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        android:minSdkVersion="33" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_TEXTS"
+        android:minSdkVersion="33" />
+
+    <application
+        android:icon="@drawable/app_notes"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.Light"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:exported="true"
+        tools:targetApi="34">
+
+        <!-- 主活动：笔记列表 -->
+        <activity
+            android:name=".NotesList"
+            android:label="title_note"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 笔记编辑活动 -->
+        <activity
+            android:name=".NoteEditor"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
+
+        <!-- 设置活动 -->
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settings_title"
+            android:exported="false"
+            android:theme="@style/AppTheme.Light" />
+
+        <!-- 笔记内容Provider -->
+        <provider
+            android:name=".NotePadProvider"
+            android:authorities="com.example.android.notepad.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <!-- FileProvider：用于打开导出的TXT文件 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="外观设置">
+        <!-- 对应你之前代码中的夜间模式开关 -->
+        <CheckBoxPreference
+            android:key="dark_mode"
+            android:title="夜间模式"
+            android:summary="开启深色主题"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <!-- 你可以在这里添加更多设置 -->
+
+</PreferenceScreen>

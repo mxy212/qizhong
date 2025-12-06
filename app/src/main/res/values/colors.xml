@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow_light">#FFF9C4</color>
+    <color name="blue_light">#BBDEFB</color>
+    <color name="green_light">#C8E6C9</color>
+    <color name="red_light">#FFCDD2</color>
+    <color name="dark_bg">#212121</color>
+    <color name="dark_card">#424242</color>
+
+    <!-- 布局引用的颜色 -->
+    <color name="yellow">#FFF9C4</color>
+    <color name="blue">#BBDEFB</color>
+    <color name="green">#C8E6C9</color>
+    <color name="red">#FFCDD2</color>
+    <color name="dark_gray">#BDBDBD</color> <!-- 新增：修复dark_gray缺失 -->
+</resources>

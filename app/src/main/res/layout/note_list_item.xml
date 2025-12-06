@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- 对应 Java 代码中的 R.id.note_title -->
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="笔记标题"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <!-- 对应 Java 代码中的 R.id.note_time -->
+    <!-- 这正是你报错缺少的 ID -->
+    <TextView
+        android:id="@+id/note_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="2023-05-20 12:00"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#888888" />
+
+</LinearLayout>

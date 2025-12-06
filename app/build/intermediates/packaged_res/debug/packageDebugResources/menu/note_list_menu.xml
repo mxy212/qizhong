@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 新增笔记 -->
+    <item
+        android:id="@+id/menu_add_note"
+        android:title="@string/menu_add_note"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always"/>
+
+    <!-- 搜索菜单项 -->
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/menu_search_note"
+        app:showAsAction="ifRoom"/>
+
+    <!-- 完善排序菜单 -->
+    <item
+        android:id="@+id/menu_sort"
+        android:title="排序"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        app:showAsAction="never">
+        <menu>
+            <!-- 创建时间排序 -->
+            <item
+                android:id="@+id/sort_create_time_asc"
+                android:title="创建时间（旧→新）"/>
+            <item
+                android:id="@+id/sort_create_time_desc"
+                android:title="创建时间（新→旧）"/>
+
+            <!-- 修改时间排序 -->
+            <item
+                android:id="@+id/sort_modify_time_asc"
+                android:title="修改时间（旧→新）"/>
+            <item
+                android:id="@+id/sort_modify_time_desc"
+                android:title="修改时间（新→旧）"/>
+
+            <!-- 颜色排序 -->
+            <item
+                android:id="@+id/sort_color_asc"
+                android:title="颜色（升序）"/>
+            <item
+                android:id="@+id/sort_color_desc"
+                android:title="颜色（降序）"/>
+        </menu>
+    </item>
+
+    <!-- 切换布局（修复“无法解析menu_switch_layout”） -->
+    <item
+        android:id="@+id/menu_switch_layout"
+        android:title="切换布局"
+        app:showAsAction="never"/>
+
+    <!-- 主题切换 -->
+    <item
+        android:id="@+id/menu_switch_theme"
+        android:title="@string/menu_switch_theme"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never"/>
+</menu>
